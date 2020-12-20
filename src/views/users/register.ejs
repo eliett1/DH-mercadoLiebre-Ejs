@@ -1,0 +1,64 @@
+<!--Head-->
+<%- include('../partials/head') %> 
+<!--Head-->
+
+<body>
+	<!-- Header -->
+	<%- include('../partials/header') %>
+	<!-- /Header -->
+
+	<!--Formulario de registro-->
+	<main class= "formulario-de-registro">
+        <form action="http://localhost:3000" method="GET">
+            <div class="formulario-de-registro-datosUsuario">
+                <label for="nombre_completo">Nombre y apellido</label><br>
+                <input type="text" id="nombre_completo" name="nombre_completo" value="Ingresá tu nombre y apellido" required><br>
+                <label for="nombre_de_usuario">Elegí tu nombre de usuario</label><br>
+                <input type="text" id="nombre_de_usuario" name="nombre_de_usuario" value="Ingresá un nombre de usuario" required><br>
+                <label for="email">Ingresá tu dirección de correo electrónico</label><br>
+                <input type="email" id="email" name="email" value="example@example.com" required><br>
+                <label for="password">Elegí tu contraseña</label><br>
+                <input type="password" id="password" name="password" value="ingresa contraseña" required><br>
+                <label for="password2">Volvé a escribir tu contraseña</label><br>
+                <input type="password" id="password2" name="password2" value="re-ingresa contraseña" required><br>
+                <label for="nacimiento">Fecha de nacimiento</label><br>
+                <input type="datetime-local" id="nacimiento" name="nacimiento" value="DD/MM/AA"><br>
+            </div>
+            <div class="formulario-de-registro-perfilUsuario">
+                <p>Perfil de usuario</p>
+                <input type="radio" name="perfil" value="comprador" checked> Comprador
+                <input type="radio" name="perfil" value="vendedor"> Vendedor
+            </div>
+            <div class="formulario-de-registro-interesesUsuario">
+                <p>Intereses (elegí uno o más intereses)</p>
+                <div class="formulario-de-registro-interesesUsuario-flex">
+                    <input type="checkbox" name="intereses" value="electro"> Electro
+                </div>
+                <div class="formulario-de-registro-interesesUsuario-flex">
+                    <input type="checkbox" name="intereses" value="moda"> Moda
+                </div>
+                <div class="formulario-de-registro-interesesUsuario-flex">
+                    <input type="checkbox" name="intereses" value="hogar"> Hogar
+                </div>
+                <div class="formulario-de-registro-interesesUsuario-flex">
+                    <input type="checkbox" name="intereses" value="jugueteria"> Juguetería
+                </div>
+                <div class="formulario-de-registro-interesesUsuario-flex">
+                    <input type="checkbox" name="intereses" value="vida_sana"> Vida Sana
+                </div>
+            </div>
+            <div class="formulario-de-registro-fotoPerfil">
+                <p>Elegí tu foto de perfil</p>
+                <input type="file" name="imagen" id="imagen" accept="image/png, image/jpeg, image/jpg"><br>
+            </div>
+            <button type="submit" class="submit"> Enviar</button>
+            <button type="reset" class="reset"> Borrar</button>
+        </form>
+    </main>
+	<!--Formulario de registro-->
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>
